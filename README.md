@@ -9,6 +9,9 @@ The robot used in this project is provided by [CLEARPATH Robotics](https://www.c
 
 ## Prerequisites
 
+Ubuntu install of ROS Noetic guide is provided at the following link:
+- [ROS Noetic Installation Guide](https://wiki.ros.org/noetic/Installation/Ubuntu)
+
 Before using this repository, you need to install the Husky ROS navigation stack. To quickly install the navigation stack, use the following command:
 
 ```bash
