@@ -63,7 +63,21 @@ rosrun map_server map_saver -f ~/maps/my_map
 
 - **launch_amcl.launch**: Launch file for running AMCL (Adaptive Monte Carlo Localization).
 
-- **duro_gnss_data_collection.launch**: Launch file for collecting GNSS data.
+Sample usage:
+
+```bash
+# Start the navigation process with the specified map and custom scan topic
+roslaunch my_package launch_amcl.launch map_name:=my_map.yaml
+```
+
+- **duro_gnss_data_collection.launch**: Launch file for collecting GNSS data (not required for mapping and navigation).
+
+Sample usage:
+
+```bash
+# Launch the Piksi Multi node using default settings
+roslaunch my_package duro_gnss_data_collection.launch
+```
 
 ### `maps/`
 
