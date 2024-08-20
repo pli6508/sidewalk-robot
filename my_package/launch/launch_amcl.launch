@@ -1,0 +1,26 @@
+<launch>
+  <!-- Set a parameter for the map directory -->
+  <arg name="map_directory" default="/home/sidewalk/catkin_ws/src/my_package/maps/" />
+  <arg name="map_name" default="MARC_IndoorL1.yaml" />
+  <arg name="map_file" default="$(arg map_directory)/$(arg map_name)" />
+
+  <!-- Run the map server with the specified map file -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!-- Run AMCL with a specific scan topic -->
+  <include file="$(find husky_navigation)/launch/amcl.launch">
+    <arg name="scan_topic" value="/ouster/scan"/>
+  </include>
+
+  <!-- Run Move Base -->
+  <include file="$(find husky_navigation)/launch/move_base.launch" />
+
+  <!-- Commented out view_robot
+  <include file="$(find husky_viz)/launch/view_robot.launch" />
+  -->
+
+  <!-- Run RViz with specified configuration file -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/sidewalk/catkin_ws/src/my_package/rviz/robot_navigation.rviz" />
+  
+</launch>
+

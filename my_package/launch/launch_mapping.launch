@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Run Gmapping with a specific scan topic -->
+  <include file="$(find husky_navigation)/launch/gmapping.launch">
+    <arg name="scan_topic" value="/ouster/scan"/>
+  </include>
+
+  <!-- Run RViz with specified configuration file -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/sidewalk/catkin_ws/src/my_package/rviz/robot_mapping.rviz" />
+
+  
+</launch>
+
