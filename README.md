@@ -5,7 +5,7 @@ This repository contains the code and configurations for the Sidewalk Robot proj
 
 The repository includes custom ROS packages and configurations designed to enhance the Husky's navigation capabilities. These modifications include adjustments for GNSS data collection, AMCL localization, and mapping processes.
 
-The robot used in this project is provided by [CLEARPATH Robotics](https://www.clearpathrobotics.com/), and the model tested is the MCM07 HUSKY. This project is developed and tested on **Ubuntu 20.04** with **ROS Noetic**.
+The robot used in this project is provided by [CLEARPATH Robotics](https://docs.clearpathrobotics.com/docs/robots/outdoor_robots/husky/user_manual_husky), and the model tested is the MCM07 HUSKY. This project is developed and tested on **Ubuntu 20.04** with **ROS Noetic**.
 
 ## Prerequisites
 
@@ -40,6 +40,11 @@ my_package/
 ├── rviz/
 │   ├── robot_mapping.rviz
 │   └── robot_navigation.rviz
+├── images/
+│   ├── MARC_L1.jpg
+│   ├── MARC_L1_pgm.jpg
+│   ├── MARC_GoogleMap.jpg
+│   └── MARC_GoogleMap_pgm.jpg
 └── src/
 ```
 
@@ -84,6 +89,12 @@ roslaunch my_package duro_gnss_data_collection.launch
 This directory contains pre-generated maps used by the navigation stack:
 
 - **MARC_IndoorL1.pgm / .yaml**: Indoor map files.
+
+<p align="center">
+  <img src="images/MARC_L1.jpg" alt="MARC L1" width="45%" />
+  <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" width="45%" />
+</p>
+
 - **MARC_OutdoorGoogle.pgm / .yaml**: Outdoor map files from Google.
 - **MARC_OutdoorTurn.pgm / .yaml**: Turn-specific outdoor maps.
 
