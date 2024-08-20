@@ -12,7 +12,7 @@ The robot used in this project is provided by [CLEARPATH Robotics](https://www.c
 Ubuntu install of ROS Noetic guide is provided at the following link:
 - [ROS Noetic Installation Guide](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
-Before using this repository, you need to install the Husky ROS navigation stack. To quickly install the navigation stack, use the following command:
+Install the Husky ROS navigation stack. To quickly install the navigation stack, use the following command:
 
 ```bash
 sudo apt-get install ros-noetic-husky-navigation
@@ -48,6 +48,18 @@ my_package/
 This directory contains launch files for various operations:
 
 - **launch_mapping.launch**: Launch file for creating maps of the environment.
+
+Sample usage:
+
+```bash
+# Start the mapping process using the launch file from the my_package package
+roslaunch my_package launch_mapping.launch
+```
+
+```bash
+# Save the map after scanning, specifying the filename prefix
+rosrun map_server map_saver -f ~/maps/my_map
+```
 
 - **launch_amcl.launch**: Launch file for running AMCL (Adaptive Monte Carlo Localization).
 
