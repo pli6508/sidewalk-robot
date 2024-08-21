@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 SidewalkRobot Project Team
+Copyright (c) 2024 Sidewalk Robot Project Team
 
 Contributors:
 - Ping Li
