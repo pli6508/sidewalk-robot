@@ -92,7 +92,7 @@ This directory contains pre-generated maps used by the navigation stack:
 
 <p align="center">
   <img src="images/MARC_L1.jpg" alt="MARC L1" height="200px" style="margin-right: 30px;" />
-  <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" height="200px" style="margin-left: 30px;" />
+  <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" height="200px" />
 </p>
 <p align="center" style="font-size:14px;">
   <em>Left: Floor Plan | Right: Scanned Map for Highlighted Corner</em>
