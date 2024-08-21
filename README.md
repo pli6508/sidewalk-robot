@@ -149,18 +149,18 @@ This directory is reserved for custom source code related to the project.
 
 ## Docker Container for GPU-Camera Module
 
-This project developed a custmized Docker container for running GPU-accelerated machine learning model on OAK-D camera.
+This project develops a customized Docker container for running GPU-accelerated machine learning models on an OAK-D camera.
 
-Docker Container Setup:
+### Docker Container Setup:
 
-1. Before Starting:
+**1. Before Starting:**
 
 ```bash
 export DISPLAY=:1 # or 0 if 1 is not working  
 xhost +
 ```
 
-2. Setup USB Permissions:
+**2. Setup USB Permissions:**
 
 ```bash
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | sudo tee /etc/udev/rules.d/80-movidius.rules
@@ -168,7 +168,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-3. Run Docker:
+**3. Run Docker:**
 
 ```bash
 sudo docker run --rm -it \
@@ -181,21 +181,22 @@ sudo docker run --rm -it \
   ping6508/gpucam:latest
 ```
 
-4. Run YOLOP model:
+**4. Run YOLOP model:**
 
 The YOLOP model is developed by Dong Wu, Manwen Liao, Weitian Zhang, Xinggang Wang, Xiang Bai, Wenqing Cheng, Wenyu Liu School of EIC, HUST. 
 
 ```bash
+# Navigate to the YOLOP directory
 cd /home/YOLOP
 ```
 
 ```bash
-# Code for webcam
+# Run YOLOP model with a webcam
 python tools/demo.py --source 0 --device 0
 ```
 
 ```bash
-# Code for OAK-D camera
+# Run YOLOP model with OAK-D camera
 python3 tools/oak_d.py --weights weights/End-to-end.pth --device 0
 ```
 
