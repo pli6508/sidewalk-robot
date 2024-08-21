@@ -32,7 +32,7 @@ After installing the Husky ROS navigation stack, clone this repository into your
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/pli6508/sidewalk-robot-testing.git
+git clone https://github.com/pli6508/sidewalk-robot.git
 ```
 
 ### Building the Workspace
