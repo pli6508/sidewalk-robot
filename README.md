@@ -187,7 +187,9 @@ sudo docker run --rm -it \
 
 **4. Run YOLOP model:**
 
-The YOLOP model is developed by Dong Wu, Manwen Liao, Weitian Zhang, Xinggang Wang, Xiang Bai, Wenqing Cheng, Wenyu Liu School of EIC, HUST. 
+The YOLOP model is developed by Dong Wu, Manwen Liao, Weitian Zhang, Xinggang Wang, Xiang Bai, Wenqing Cheng, and Wenyu Liu from the School of EIC, HUST.
+
+For more details, refer to the paper published in *Machine Intelligence Research* in 2022: [YOLOP: You Only Look Once for Panoptic Driving Perception](https://link.springer.com/article/10.1007/s11633-022-1339-y).
 
 ```bash
 # Navigate to the YOLOP directory
