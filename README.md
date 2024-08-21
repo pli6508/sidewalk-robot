@@ -101,8 +101,8 @@ This directory contains pre-generated maps used by the navigation stack:
 - **MARC_OutdoorGoogle.pgm / .yaml**: Outdoor map files from Google.
 
 <p align="center">
-  <img src="images/MARC_GoogleMap.jpg" alt="MARC_GoogleMap" height="200px" />
-  <img src="images/MARC_GoogleMap_pgm.jpg" alt="MARC_GoogleMap PGM" height="200px" />
+  <img src="images/MARC_GoogleMap.jpg" alt="MARC GoogleMap" height="200px" />
+  <img src="images/MARC_GoogleMap_pgm.jpg" alt="MARC GoogleMap PGM" height="200px" />
 </p>
 <p align="center" style="font-size:14px;">
   <em>Left: Plan View Referenced from Google Map | Right: Scanned Map for Highlighted Path</em>
