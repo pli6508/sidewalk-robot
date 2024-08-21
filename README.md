@@ -1,6 +1,8 @@
 
 # Sidewalk Robot Outdoor Testing Code
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 This repository contains the code and configurations for the Sidewalk Robot project, focused on developing and modifying navigation algorithms for a Husky UGV to operate autonomously on sidewalks. The project primarily focuses on outdoor testing scenarios, ensuring the robot can navigate effectively in real-world environments.
 
 The repository includes custom ROS packages and configurations designed to enhance the Husky's navigation capabilities. These modifications include adjustments for GNSS data collection, AMCL localization, and mapping processes.
