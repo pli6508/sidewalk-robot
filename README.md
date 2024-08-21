@@ -1,5 +1,5 @@
 
-# Sidewalk Robot Outdoor Testing Code
+# Sidewalk Robot Development v0.0
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
