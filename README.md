@@ -91,8 +91,14 @@ This directory contains pre-generated maps used by the navigation stack:
 - **MARC_IndoorL1.pgm / .yaml**: Indoor map files.
 
 <p align="center">
-  <img src="images/MARC_L1.jpg" alt="MARC L1" width="45%" />
-  <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" width="45%" />
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="images/MARC_L1.jpg" alt="MARC L1" height="200px" />
+    <figcaption align="center">Floor Plan</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" height="200px" />
+    <figcaption align="center">Scanned Map</figcaption>
+  </figure>
 </p>
 
 - **MARC_OutdoorGoogle.pgm / .yaml**: Outdoor map files from Google.
