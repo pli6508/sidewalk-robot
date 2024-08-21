@@ -22,6 +22,32 @@ For full Husky UGV tutorials, please refer to the detailed guide provided by CLE
 
 - [Husky ROS Noetic Installation Guide](https://www.clearpathrobotics.com/assets/guides/noetic/husky/index.html)
 
+## Installation and Setup
+
+### Cloning the Repository
+
+After installing the Husky ROS navigation stack, clone this repository into your ROS workspace:
+
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/pli6508/sidewalk-robot-testing.git
+```
+
+### Building the Workspace
+
+Navigate back to your workspace and build the packages:
+
+```bash
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+```
+
+```bash
+# add the source code to the bashrc file
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
+
 ## Repository Structure
 
 ```plaintext
@@ -120,62 +146,6 @@ This directory contains RViz configuration files for visualizing the robot’s e
 ### `src/`
 
 This directory is reserved for custom source code related to the project.
-
-## Installation and Setup
-
-### Cloning the Repository
-
-After installing the Husky ROS navigation stack, clone this repository into your ROS workspace:
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/your-username/your-repo-name.git
-```
-
-### Building the Workspace
-
-Navigate back to your workspace and build the packages:
-
-```bash
-cd ~/catkin_ws
-catkin_make
-source devel/setup.bash
-```
-
-## Usage
-
-### GNSS Data Collection
-
-To collect GNSS data, use the following launch file:
-
-```bash
-roslaunch my_package/launch/duro_gnss_data_collection.launch
-```
-
-### AMCL Localization
-
-To run AMCL for localization, use the following launch file:
-
-```bash
-roslaunch my_package/launch/launch_amcl.launch
-```
-
-### Mapping
-
-To create maps of the environment, use the following launch file:
-
-```bash
-roslaunch my_package/launch/launch_mapping.launch
-```
-
-### RViz Visualization
-
-To visualize the robot’s mapping or navigation:
-
-```bash
-roslaunch my_package/rviz/robot_mapping.rviz
-roslaunch my_package/rviz/robot_navigation.rviz
-```
 
 ## Contributing
 
