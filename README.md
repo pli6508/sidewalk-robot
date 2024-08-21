@@ -147,6 +147,58 @@ This directory contains RViz configuration files for visualizing the robot’s e
 
 This directory is reserved for custom source code related to the project.
 
+## Docker Container for GPU-Camera Module
+
+This project developed a custmized Docker container for running GPU-accelerated machine learning model on OAK-D camera.
+
+Docker Container Setup:
+
+1. Before Starting:
+
+```bash
+export DISPLAY=:1 # or 0 if 1 is not working  
+xhost +
+```
+
+2. Setup USB Permissions:
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | sudo tee /etc/udev/rules.d/80-movidius.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+3. Run Docker:
+
+```bash
+sudo docker run --rm -it \
+  --runtime nvidia \
+  --gpus all \
+  --privileged \
+  --mount type=bind,source=/dev/bus/usb,target=/dev/bus/usb \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  ping6508/gpucam:latest
+```
+
+4. Run YOLOP model:
+
+The YOLOP model is developed by Dong Wu, Manwen Liao, Weitian Zhang, Xinggang Wang, Xiang Bai, Wenqing Cheng, Wenyu Liu School of EIC, HUST. 
+
+```bash
+cd /home/YOLOP
+```
+
+```bash
+# Code for webcam
+python tools/demo.py --source 0 --device 0
+```
+
+```bash
+# Code for OAK-D camera
+python3 tools/oak_d.py --weights weights/End-to-end.pth --device 0
+```
+
 ## Contributing
 
 Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
@@ -158,4 +210,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Original Husky navigation stack from [CLEARPATH Robotics](https://www.clearpathrobotics.com/).
+- YOLOP model from [YOLOP](https://github.com/hustvl/YOLOP)
 - The ROS community for providing necessary tools and libraries.
