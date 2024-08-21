@@ -151,6 +151,8 @@ This directory is reserved for custom source code related to the project.
 
 This project develops a customized Docker container for running GPU-accelerated machine learning models on an OAK-D camera.
 
+The Docker container is published at the DockerHub repository [gpucam](https://hub.docker.com/repository/docker/ping6508/gpucam/general)
+
 ### Docker Container Setup:
 
 **1. Before Starting:**
