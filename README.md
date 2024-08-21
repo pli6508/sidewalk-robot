@@ -91,7 +91,7 @@ This directory contains pre-generated maps used by the navigation stack:
 - **MARC_IndoorL1.pgm / .yaml**: Indoor map files.
 
 <p align="center">
-  <img src="images/MARC_L1.jpg" alt="MARC L1" height="200px" style="margin-right: 30px;" />
+  <img src="images/MARC_L1.jpg" alt="MARC L1" height="200px" />
   <img src="images/MARC_L1_pgm.jpg" alt="MARC L1 PGM" height="200px" />
 </p>
 <p align="center" style="font-size:14px;">
@@ -99,6 +99,15 @@ This directory contains pre-generated maps used by the navigation stack:
 </p>
 
 - **MARC_OutdoorGoogle.pgm / .yaml**: Outdoor map files from Google.
+
+<p align="center">
+  <img src="images/MARC_GoogleMap.jpg" alt="MARC_GoogleMap" height="200px" />
+  <img src="images/MARC_GoogleMap_pgm.jpg" alt="MARC_GoogleMap PGM" height="200px" />
+</p>
+<p align="center" style="font-size:14px;">
+  <em>Left: Plan View Referenced from Google Map | Right: Scanned Map for Highlighted Path</em>
+</p>
+
 - **MARC_OutdoorTurn.pgm / .yaml**: Turn-specific outdoor maps.
 
 ### `rviz/`
